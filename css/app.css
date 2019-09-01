@@ -88,9 +88,9 @@
   top: 0;
   right: 0;
   z-index: 3;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .weatherReprot h4, .weatherReprot2 h4 {
@@ -120,9 +120,14 @@
   top: 200px;
   right: 0;
   z-index: 3;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   padding: 20px;
   text-align: center;
+}
+
+.icon, .icon2 {
+  background: rgba(175, 255, 251, 0.6);
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 800px) {
