@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>try to give stylesheet useing css</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    <title>Countdown</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body class="this">
@@ -20,7 +20,12 @@
         <div class="owl-carousel  myowlcarousel">
             <div class="item">
                 <div class="full itemInner">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8IuMf9c2_qo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <img src="images/1.jpg" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div class="full itemInner">
+                    <img src="images/2.jpg" alt="">
                 </div>
             </div>
             <div class="item">
@@ -48,54 +53,49 @@
                     <img src="images/7.jpg" alt="">
                 </div>
             </div>
-            <div class="item">
-                <div class="full itemInner">
-                    <img src="images/8.png" alt="">
-                </div>
-            </div>
         </div>
         <div class="countWrap">
             <h2 class="h2">Countdown for </h2>
             <h1>Gangtok</h1>
             <div class="countdown">
-                <div class="container days">
+                <div class="eachTimeer days">
                     <canvas id="days-canvas" width="200" height="200"></canvas>
                     <svg width="200" height="200">
-                        <circle id="outer" cx="100" cy="100" r="90" fill="transparent" stroke-width="20" stroke="#47FFAF"
-                            opacity="0.1" />
+                        <circle id="outer" cx="100" cy="100" r="90" fill="transparent" stroke-width="20"
+                            stroke="#47FFAF" opacity="0.1" />
                     </svg>
                     <div class="label">
                         <span id="days-value"></span><br>
                         <span>days</span>
                     </div>
                 </div>
-                <div class="container hours">
+                <div class="eachTimeer hours">
                     <canvas id="hours-canvas" width="200" height="200"></canvas>
                     <svg width="200" height="200">
-                        <circle id="outer" cx="100" cy="100" r="90" fill="transparent" stroke-width="20" stroke="#FFA246"
-                            opacity="0.1" />
+                        <circle id="outer" cx="100" cy="100" r="90" fill="transparent" stroke-width="20"
+                            stroke="#FFA246" opacity="0.1" />
                     </svg>
                     <div class="label">
                         <span id="hours-value"></span><br>
                         <span>hours</span>
                     </div>
                 </div>
-                <div class="container minutes">
+                <div class="eachTimeer minutes">
                     <canvas id="minutes-canvas" width="200" height="200"></canvas>
                     <svg width="200" height="200">
-                        <circle id="outer" cx="100" cy="100" r="90" fill="transparent" stroke-width="20" stroke="#E834B1"
-                            opacity="0.1" />
+                        <circle id="outer" cx="100" cy="100" r="90" fill="transparent" stroke-width="20"
+                            stroke="#E834B1" opacity="0.1" />
                     </svg>
                     <div class="label">
                         <span id="minutes-value"></span><br>
                         <span>minutes</span>
                     </div>
                 </div>
-                <div class="container seconds">
+                <div class="eachTimeer seconds">
                     <canvas id="seconds-canvas" width="200" height="200"></canvas>
                     <svg width="200" height="200">
-                        <circle id="outer" cx="100" cy="100" r="90" fill="transparent" stroke-width="20" stroke="#3A55FF"
-                            opacity="0.1" />
+                        <circle id="outer" cx="100" cy="100" r="90" fill="transparent" stroke-width="20"
+                            stroke="#3A55FF" opacity="0.1" />
                     </svg>
                     <div class="label">
                         <span id="seconds-value"></span><br>
@@ -104,14 +104,32 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="manFace animated" style="display: none;">
-            <img src="images/man.png" alt="">
-        </div> -->
-        <!-- <div class="svgDataStructre">
-            <img src="images/svgData.svg" alt="">
-        </div> -->
+        <div class="weatherReprot">
+            <h4>Current Weather</h1>
+            <h5>Gangtok, IN</h2>
+            <div class="weather-container">
+                <img class="icon">
+                <div class="weatherInfo">
+                    <p class="weather"></p>
+                    <p class="temp"></p>
+                </div>
+            </div>
+        </div>
+        <div class="weatherReprot2">
+            <h4>Current Weather</h1>
+            <h5>Kolkata, IN</h2>
+            <div class="weather-container">
+                <img class="icon2">
+                <div class="weatherInfo">
+                    <p class="weather2"></p>
+                    <p class="temp2"></p>
+                </div>
+            </div>
+        </div>
     </section>
+
+
+
     <!-- <script src="js/clock.js"></script> -->
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
@@ -134,40 +152,12 @@
                 autoplay: true,
                 dots: true,
                 loop: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause:true
+                autoplayTimeout: 10000,
+                autoplayHoverPause: true
             });
         });
     </script>
     <script src="js/app.js"></script>
-    <script>
-        $(document).ready(function () {
-            var body = $('body').attr('class');
-            // alert(body);
-            if (body == 'this') {
-                $("head").after(`
-<style type="text/css" rel="stylesheet">
-        :root {
-            --mainColor2: coral;    
-            --mainColor: red;
-        }
-</style>
-                                `);
-            } else {
-
-            }
-        });
-    </script>
-    <script src="https://rawgithub.com/soulwire/sketch.js/master/js/sketch.min.js" type="text/javascript"></script>
-
-    <script type="module">
-        var a = $('#section1').css('display');
-        if (a == 'block') {
-            $('#clear').after('<script src="js/wave.js"><\/script>');
-        } 
-    </script>
-
-
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $(function () {
@@ -175,6 +165,44 @@
         });
     </script>
     <script src="js/countDown.js"></script>
+    <script>
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=gangtok&units=metric&appid=ab85ba57bbbb423fb62bfb8201126ede", function (data) {
+            // https://openweathermap.org/weathermap?zoom=12&lat=22.5677&lon=88.3476
+            console.log(data);
+
+            var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+
+            var temp = Math.floor(data.main.temp);
+
+            var weather = data.weather[0].main;
+
+
+            $('.icon').attr('src', icon);
+            $(".temp").append(temp + '°C');
+
+            $(".weather").append(weather);
+        });
+
+
+        // for kolkata
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=kolkata&units=metric&appid=ab85ba57bbbb423fb62bfb8201126ede", function (data) {
+            // https://openweathermap.org/weathermap?zoom=12&lat=22.5677&lon=88.3476
+            console.log(data);
+
+            var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+
+            var temp = Math.floor(data.main.temp);
+
+            var weather = data.weather[0].main;
+
+
+            $('.icon2').attr('src', icon);
+            $(".temp2").append(temp + '°C');
+
+            $(".weather2").append(weather);
+        });
+
+    </script>
     <div class="clear" id="clear"></div>
 </body>
 

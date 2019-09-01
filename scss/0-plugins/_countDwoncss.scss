@@ -8,13 +8,24 @@
   min-width: 800px;
   @include transfrom("translate", -50%, -50%);  
   h2{
-    font-size: 4vw;
+    font-size: 3vw;
     text-align: center;
     color: #fff;
     margin-bottom: 20px;
+    position: relative;
+    &::after{
+      content: "";
+      width: 350px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      @include transfrom("translate",-50%, 0);
+    }
   }
   h1{
-    font-size: 6vw;
+    font-size: 7vw;
     text-align: center;
     color: #fff;
     margin-bottom: 20px;
@@ -31,8 +42,11 @@
     align-items: center;
     width: 60%; 
     min-width: 800px;
-    .container {
+    .eachTimeer {
       position: relative;
+      &+.eachTimeer {
+        margin-left: 30px;
+      }
       svg {
         position: absolute;
         top: 0;
@@ -63,6 +77,41 @@
       }
     }  
   }
+  .weatherReprot{
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
+  }
+  .weatherReprot h4, .weatherReprot2 h4{
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .weatherReprot h5, .weatherReprot2 h5 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 400;
+  }
+  .weather-container{
+    display: flex;
+  }
+  .weatherInfo{
+    margin-left: 10px;
+  }
+  .weatherReprot2{
+    color: #fff;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    z-index: 3; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
+  }
   
   @media screen and (max-width: 800px) {
     .countdown {
@@ -73,3 +122,4 @@
       min-width: auto;
     }
   }
+  
