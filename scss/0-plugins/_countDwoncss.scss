@@ -98,6 +98,8 @@
   }
   .weather-container{
     display: flex;
+    justify-content: center;
+    align-items: center; 
   }
   .weatherInfo{
     margin-left: 10px;
