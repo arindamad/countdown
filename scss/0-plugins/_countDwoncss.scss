@@ -1,12 +1,12 @@
 .countWrap{
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 10%;
   width: 100%;
   z-index: 10;
   width: 60%; 
   min-width: 800px;
-  @include transfrom("translate", -50%, -50%);  
+  @include transfrom("translate", 0, -50%);  
   h2{
     font-size: 3vw;
     text-align: center;
@@ -40,7 +40,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%; 
     min-width: 800px;
     .eachTimeer {
       position: relative;
@@ -51,6 +50,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: -1;
       }
       .label {
         position: absolute;
@@ -86,6 +86,7 @@
     padding: 20px;
     text-align: center;
     background: rgba(255, 255, 255, 0.2);
+    width: 300px;
 }
   .weatherReprot h4, .weatherReprot2 h4{
     margin-bottom: 10px;
@@ -113,6 +114,7 @@
     background: rgba(255, 255, 255, 0.2);
     padding: 20px;
     text-align: center;
+    width: 300px;
   }
   .icon, .icon2{
     background: rgba(175, 255, 251, 0.6);
@@ -128,4 +130,13 @@
       min-width: auto;
     }
   }
-  
+  .ar360photo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+    iframe{
+      width: 300px;
+      height: 300px;
+    }
+  }
