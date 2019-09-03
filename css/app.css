@@ -206,6 +206,9 @@ ul {
   width: 100%;
   float: left;
 }
+.bannerPanel .item .itemInner iframe {
+  height: 100vh;
+}
 .bannerPanel .item .itemInner img {
   width: 100%;
   display: block;
