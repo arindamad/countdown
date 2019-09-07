@@ -17,6 +17,7 @@
   color: #fff;
   margin-bottom: 20px;
   position: relative;
+  user-select: none;
 }
 .countWrap h2::after {
   content: "";
@@ -35,6 +36,7 @@
   text-align: center;
   color: #fff;
   margin-bottom: 20px;
+  user-select: none;
 }
 .countWrap h4 {
   color: #fff;
@@ -90,16 +92,18 @@
   z-index: 3;
   padding: 20px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  width: 300px;
+  background: rgba(0, 0, 0, 0.6);
+  width: 400px;
 }
 
-.weatherReprot h4, .weatherReprot2 h4 {
+.weatherReprot h4,
+.weatherReprot2 h4 {
   margin-bottom: 10px;
   font-size: 20px;
 }
 
-.weatherReprot h5, .weatherReprot2 h5 {
+.weatherReprot h5,
+.weatherReprot2 h5 {
   margin-bottom: 15px;
   font-size: 18px;
   font-weight: 400;
@@ -115,21 +119,36 @@
   margin-left: 10px;
 }
 
-.weatherReprot2 {
-  color: #fff;
-  position: absolute;
-  top: 200px;
-  right: 0;
-  z-index: 3;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  text-align: center;
-  width: 300px;
-}
-
-.icon, .icon2 {
+.icon,
+.icon2 {
   background: rgba(175, 255, 251, 0.6);
   border-radius: 50%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  user-select: none;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.socialGroup ul li a {
+  color: #fff;
+}
+.socialGroup ul li a i {
+  font-size: 22px;
+}
+
+.socialGroup ul li {
+  list-style: none;
+  width: auto;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 800px) {
@@ -144,12 +163,35 @@
 .ar360photo {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 42px;
   z-index: 6;
+  width: 400px;
+  height: calc(100vh - 290px);
 }
 .ar360photo iframe {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
+}
+
+.eachWeather {
+  width: 50%;
+  -moz-flex: 0 0 50%;
+  -webkit-flex: 0 0 50%;
+  flex: 0 0 50%;
+}
+
+.gangtokWeather {
+  border-right: 1px solid #f6f6f6;
+}
+
+.weatherTable {
+  margin-top: 10px;
+}
+
+.weatherTable li {
+  padding: 4px 0;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 /* bases.dir your bases laouts form here */
@@ -180,6 +222,24 @@ a, button {
 
 ul {
   list-style: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md {
+  flex: 1 0 0;
+}
+
+.col-md-auto {
+  width: auto;
+  flex: 0 0 auto;
 }
 
 /* banner laouts form here */

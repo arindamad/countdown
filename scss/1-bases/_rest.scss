@@ -25,3 +25,17 @@ a, button{
 ul{
     list-style: none;
 }
+.d-flex{
+    display: flex;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-md{
+    flex: 1 0 0;
+}
+.col-md-auto{
+    width: auto;
+    flex: 0 0 auto;
+}

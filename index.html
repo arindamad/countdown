@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
@@ -114,27 +115,68 @@
         </div>
         <div class="weatherReprot">
             <h4>Current Weather</h1>
-            <h5>Gangtok, IN</h2>
-            <div class="weather-container">
-                <img class="icon">
-                <div class="weatherInfo">
-                    <p class="weather"></p>
-                    <p class="temp"></p>
+            <div class="d-flex">
+                <div class="eachWeather gangtokWeather">
+                    <h5>Gangtok, IN</h2>
+                    <div class="weather-container">
+                        <img class="icon">
+                        <div class="weatherInfo">
+                            <p class="weather"></p>
+                            <p class="temp"></p>
+                        </div>
+                    </div>
+
+                    <ul  class="weatherTable">
+                        <li class="weDes"></li>
+                        <li>
+                            Humidity: <span class="humidity1"></span>
+                        </li>
+                        <li>Wind: <span class="winspeed"></span></li>
+                    </ul>
+                </div>
+                <div class="eachWeather kolkataWeather">
+                    <h5>Kolkata, IN</h2>
+                        <div class="weather-container">
+                            <img class="icon2">
+                            <div class="weatherInfo">
+                                <p class="weather2"></p>
+                                <p class="temp2"></p>
+                            </div>
+                        </div>
+                        <ul class="weatherTable">
+                            <li class="weDes"></li>
+                            <li>Humidity: <span class="humidity2"></span>
+                            </li>
+                            <li>Wind: <span class="winspeed"></span></li>
+                        </ul>
                 </div>
             </div>
+            
         </div>
-        <div class="weatherReprot2">
-            <h4>Current Weather</h1>
-            <h5>Kolkata, IN</h2>
-            <div class="weather-container">
-                <img class="icon2">
-                <div class="weatherInfo">
-                    <p class="weather2"></p>
-                    <p class="temp2"></p>
-                </div>
-            </div>
-        </div>
+        
     </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    Design &amp; Develop by Arindam Sarkar. 
+                </div>
+                <div class="col-md-auto socialGroup">
+                    <ul class="d-flex">
+                        <li><a href="https://www.facebook.com/arindamthecool/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/Arindam56199145" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://github.com/arindamad" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/arindamad/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="https://in.pinterest.com/arindamsarkar196/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                        <li><a href="https://stackoverflow.com/users/9540251/arindam-sarkar" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
+                        <li><a href="https://dribbble.com/arindamad" target="_blank"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.deviantart.com/arindam196" target="_blank"><i class="fa fa-deviantart" aria-hidden="true"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -187,8 +229,10 @@
 
             $('.icon').attr('src', icon);
             $(".temp").append(temp + '°C');
-
             $(".weather").append(weather);
+            $('.humidity1').html(data.main.humidity+"%");
+            $('.weDes').eq(0).html(data.weather[0].description);
+            $('.winspeed').eq(0).html(data.wind.speed+' m / sec');
         });
 
 
@@ -206,8 +250,10 @@
 
             $('.icon2').attr('src', icon);
             $(".temp2").append(temp + '°C');
-
             $(".weather2").append(weather);
+            $('.humidity2').html(data.main.humidity+"%");
+            $('.weDes').eq(1).html(data.weather[0].description);
+            $('.winspeed').eq(1).html(data.wind.speed+' m / sec');
         });
 
     </script>
