@@ -2,11 +2,11 @@
 .countWrap {
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: calc((100% - 1122px)/4);
   width: 100%;
   z-index: 10;
   width: 60%;
-  min-width: 800px;
+  width: 922px;
   -moz-transform: translate(0, -50%);
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -171,6 +171,7 @@ footer {
 .ar360photo iframe {
   width: 100%;
   height: 100%;
+  height: calc(100vh - 290px);
 }
 
 .eachWeather {
@@ -192,6 +193,23 @@ footer {
   padding: 4px 0;
   font-size: 14px;
   font-weight: 500;
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+}
+.owl-carousel .owl-nav button.owl-prev {
+  background: #fff !important;
+  color: #333 !important;
+  padding: 6px 10px !important;
+  margin-right: 10px;
+}
+.owl-carousel .owl-nav button.owl-next {
+  background: #fff !important;
+  color: #333 !important;
+  padding: 6px 10px !important;
 }
 
 /* bases.dir your bases laouts form here */
@@ -248,11 +266,11 @@ ul {
   position: relative;
   z-index: 1;
 }
-.bannerPanel .item {
+.bannerPanel .myowlcarousel .item {
   width: 100%;
   float: left;
 }
-.bannerPanel .item::after {
+.bannerPanel .myowlcarousel .item::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -262,14 +280,14 @@ ul {
   left: 0;
   z-index: 2;
 }
-.bannerPanel .item .itemInner {
+.bannerPanel .myowlcarousel .item .itemInner {
   width: 100%;
   float: left;
 }
-.bannerPanel .item .itemInner iframe {
+.bannerPanel .myowlcarousel .item .itemInner iframe {
   height: 100vh;
 }
-.bannerPanel .item .itemInner img {
+.bannerPanel .myowlcarousel .item .itemInner img {
   width: 100%;
   display: block;
   height: 100vh;

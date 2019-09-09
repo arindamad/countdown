@@ -1,8 +1,8 @@
 .bannerPanel {
     height: 100vh;
     position: relative;
-    z-index: 1;    
-    .item{
+    z-index: 1;   
+    .myowlcarousel .item{
         width: 100%;
         float: left;
         &::after{

@@ -1,11 +1,11 @@
 .countWrap {
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: calc((100% - 1122px)/4);
   width: 100%;
   z-index: 10;
   width: 60%;
-  min-width: 800px;
+  width: 922px;
   @include transfrom("translate", 0, -50%);
 
   h2 {
@@ -179,6 +179,7 @@ footer {
   iframe {
     width: 100%;
     height: 100%;
+    height: calc(100vh - 290px);
   }
 }
 .eachWeather{
@@ -197,4 +198,20 @@ footer {
   padding: 4px 0;
   font-size: 14px;
   font-weight: 500;
+}
+.owl-carousel .owl-nav{
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  button.owl-prev{
+    background: #fff !important;
+    color: #333 !important;
+    padding: 6px 10px !important;
+    margin-right: 10px;
+  }
+  button.owl-next{
+    background: #fff !important;
+    color: #333 !important;
+    padding: 6px 10px !important;
+  }
 }
